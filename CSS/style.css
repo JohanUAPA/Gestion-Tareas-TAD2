@@ -1,0 +1,193 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  background-color: #f5f6fa; /* Fondo más claro */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+/* Formulario */
+.task-form input, .task-form textarea, .task-form select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.task-form input:focus, .task-form textarea:focus, .task-form select:focus {
+  outline: none;
+  box-shadow: 0 3px 15px rgba(0, 123, 255, 0.3);
+}
+
+button {
+  padding: 12px 18px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Lista de tareas */
+#taskList li, #urgentTaskQueue li {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+#taskList li:hover, #urgentTaskQueue li:hover {
+  background-color: #f0f4ff;
+  transform: translateY(-3px);
+}
+
+
+.urgent {
+  border-left: 5px solid #ff4c4c;
+  color: #dc1529; 
+}
+
+/* Tareas completadas */
+.completed-task {
+  border-left: 5px solid #28a745; 
+  color: #155724; 
+  text-decoration: line-through;
+}
+
+.incomplete-task {
+  border-left: 5px solid #dc3545; 
+}
+
+/* Botones en la lista de tareas */
+.task-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.task-btn button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e63939;
+}
+
+.edit-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #138496;
+}
+
+.complete-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.complete-btn:hover {
+  background-color: #218838;
+}
+
+/* Historial de tareas */
+#taskHistory {
+  margin-top: 40px;
+}
+
+#taskHistory li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+#taskHistory li:hover {
+  background-color: #e2e6ea;
+}
+
+/* Checkbox */
+label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff4c4c;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked {
+  border: 2px solid #ff4c4c;
+  background-color: #ff4c4c;
+}
+
+label span {
+  font-weight: bold;
+  color: #333;
+}

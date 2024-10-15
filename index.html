@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicación de Gestión de Tareas</h1>
+
+        <!-- Formulario para agregar tareas -->
+        <div class="task-form">
+            <input type="text" id="taskTitle" placeholder="Título de la tarea">
+            <textarea id="taskDescription" placeholder="Descripción de la tarea"></textarea>
+            <input type="number" id="taskPriority" placeholder="Prioridad (1-5)">
+            <input type="date" id="taskDueDate">
+
+            <!-- Campo para Categorías -->
+            <select id="taskCategory" onchange="updateSubcategories()">
+                <option value="" disabled selected>Seleccione una categoría</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Estudio">Estudio</option>
+                <option value="Personal">Personal</option>
+            </select>
+            
+            <!-- Campo para Subcategorías -->
+            <select id="taskSubcategory">
+                <option value="" disabled selected>Seleccione una subcategoría</option>
+            </select>
+            
+            <label>
+                <input type="checkbox" id="isUrgent"> Marcar como urgente
+            </label>
+
+            <button onclick="addTask()">Agregar Tarea</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <h2>Lista de Tareas</h2>
+        <ul id="taskList"></ul>
+
+        <!-- Cola de Tareas Urgentes -->
+        <h2>Tareas Urgentes</h2>
+        <ul id="urgentTaskQueue"></ul>
+
+        <!-- Historial de acciones -->
+        <h2>Historial de Acciones</h2>
+        <ul id="taskHistory"></ul>
+        <button id="undoButton" onclick="undoAction()">Deshacer</button>
+        <button id="redoButton" onclick="redoAction()">Rehacer</button>
+    </div>
+
+    <script src="SCRIPT/script.js"></script>
+</body>
+</html>
